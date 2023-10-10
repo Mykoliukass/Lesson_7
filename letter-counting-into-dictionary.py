@@ -3,6 +3,9 @@
 # Letters should be in alphabetical order.
 words = input("""Please provide five or more words, separated by a comma. 
 I will count how many times each letter is repeated throughout all these words and provide you with a dictionary of these counts. """)
+if len(words.split(',')) <5:
+    print('You have entered less than five words, please try to run the program again')
+    exit()
 words_no_separation_all_lower = words.replace(' ', '').replace(',', '').lower()
 letter_count = {}
 for letter in words_no_separation_all_lower:
