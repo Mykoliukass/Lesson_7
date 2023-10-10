@@ -6,7 +6,7 @@ I will count how many times each letter is repeated throughout all these words a
 if len(words.split(',')) <5:
     print('You have entered less than five words, please try to run the program again')
     exit()
-words_no_separation_all_lower = words.replace(' ', '').replace(',', '').lower()
+words_no_separation_all_lower = sorted(words.replace(' ', '').replace(',', '').lower())
 letter_count = {}
 for letter in words_no_separation_all_lower:
     if letter in letter_count:
